@@ -5,7 +5,6 @@ I'm not sure, but maybe this is useful because it could be faster?*/
 
 select
 -- from raw_orders
-o.customerid,
 o.orderid,
 o.orderdate,
 o.shipdate,
@@ -14,10 +13,12 @@ o.ordersellingprice - o.ordercostprice as orderprofit,
 o.ordercostprice,
 o.ordersellingprice,
 -- from raw_customer
+c.customerid,
 c.customername,
 c.segment,
 c.country,
 -- from raw_product
+p.productid,
 p.category,
 p.productname,
 p.subcategory
