@@ -1,0 +1,13 @@
+/*Based on the unique test, I wanted to develop a query that simply could pull records that were either not unique
+or were unique and then wanted to count how many products were there*/
+
+
+/*with prodcount as
+    (select
+        productid,
+        count(productid) as numprods
+    from raw_product
+    group by productid
+    having count(*)>1)
+select count(*) from prodcount
+
