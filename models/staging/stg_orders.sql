@@ -5,6 +5,7 @@ I'm not sure, but maybe this is useful because it could be faster?*/
 
 select
 -- from raw_orders
+{{ dbt_utils.generate_surrogate_key(['o.orderid', 'c.customerid', 'p.productid']) }} as sk_orders,
 o.orderid,
 o.orderdate,
 o.shipdate,
