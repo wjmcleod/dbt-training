@@ -7,8 +7,8 @@ models:
         tests:
           - unique
           - not_null
-          
-  - name: raw_order
+
+  - name: raw_orders
     columns:
       - name: orderid
         tests:
